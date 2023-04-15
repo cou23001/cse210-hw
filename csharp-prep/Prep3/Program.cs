@@ -18,7 +18,7 @@ class Program
         
         do
         {
-            int magic = randomGenerator.Next(1, 5);
+            int magic = randomGenerator.Next(1, 100);
 
             do 
             {
