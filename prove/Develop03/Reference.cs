@@ -2,10 +2,10 @@ using System;
 
 public class Reference
 {
-    string _book;
-    string _chapter;
-    string _verseStart;
-    string _verseEnd;
+    private string _book;
+    private string _chapter;
+    private string _verseStart;
+    private string _verseEnd;
 
     public Reference(string book, string chapter, string singleVerse) {
         _book = book;
