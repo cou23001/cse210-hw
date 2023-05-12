@@ -2,7 +2,7 @@ using System;
 
 public class ListingActivity : Activity {
 
-    private List<string> prompts = new List<string>(){
+    private List<string> _prompts = new List<string>(){
         "When have you felt the Holy Ghost this month?",
         "What is your favorite thing about this experience?",
         "Who are people that you appreciate?",
@@ -42,10 +42,10 @@ public class ListingActivity : Activity {
     public string GetRandomPrompt() {
         Random random = new Random();
         int randomIndex = random.Next(CountPrompts());
-        return prompts[randomIndex];
+        return _prompts[randomIndex];
     }
 
      public int CountPrompts() {
-        return prompts.Count;
+        return _prompts.Count;
     }
 }

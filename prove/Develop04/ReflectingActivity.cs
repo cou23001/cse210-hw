@@ -4,7 +4,7 @@ public class ReflectingActivity : Activity {
 
     private HashSet<int> _usedIndices = new HashSet<int>();
 
-    private List<string> questions = new List<string>(){
+    private List<string> _questions = new List<string>(){
         "How did you feel when it was complete?",
         "What is your favorite thing about this experience?",
         "Why was this experience meaningful to you?",
@@ -18,7 +18,7 @@ public class ReflectingActivity : Activity {
         "How can you keep this experience in mind in the future?",
     };
 
-    private List<string> prompts = new List<string>() {
+    private List<string> _prompts = new List<string>() {
         "Think of a time when you stood up for someone else.",
         "Think of a time when you did something really difficult.",
         "Think of a time when you helped someone in need.",
@@ -69,19 +69,19 @@ public class ReflectingActivity : Activity {
     public string GetRandomPrompt() {
         Random random = new Random();
         int randomIndex = random.Next(CountPrompts());
-        return prompts[randomIndex];
+        return _prompts[randomIndex];
     }
 
     public string GetQuestions(int i) {
-        return questions[i];
+        return _questions[i];
     }
 
     public int CountQuestions() {
-        return questions.Count;
+        return _questions.Count;
     }
 
     public int CountPrompts() {
-        return prompts.Count;
+        return _prompts.Count;
     }
 
     public int GetRandomQuestionNumber() {
