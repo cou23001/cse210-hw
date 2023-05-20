@@ -68,8 +68,7 @@ class Program
                     break;
                 case 2:
                     Console.WriteLine ("The goals are:");            
-                    Console.WriteLine(goals.DisplayGoals());
-                    Console.WriteLine();
+                    Console.Write(goals.DisplayGoals());
                     break;
                 case 3:
                     Console.Write("Name of the file: ");
