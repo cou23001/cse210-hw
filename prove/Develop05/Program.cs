@@ -3,8 +3,8 @@
 
 // Exceeding Requirements
 // The program can add negative goals
-// If a negative goal is added. The programs deducts the total of points.
-// It checks if it is a positive or negative goal to display the appropiate message.
+// If a negative goal is added. The program deducts the total of points.
+// It checks if it is a positive or negative goal to display the correct 
 
 using System;
 
