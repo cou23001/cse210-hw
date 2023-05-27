@@ -12,13 +12,15 @@ public class Order
     {
         _products.Add(p);
     }
-     public double GetTotalCostOrder()
+     public string GetTotalCostOrder()
      {
         double total = 0;
         foreach (Product product in _products) {
             total = total + product.GetPriceProduct();
         }
-        return total + GetShippingCost(_customer);
+        double value = total + GetShippingCost(_customer);
+        string formattedValue = $"{value:0.00}";
+        return formattedValue;
      }
 
      public double GetShippingCost(Customer customer)
@@ -34,7 +36,7 @@ public class Order
 
      public string GetPackingLabel()
      {
-        string data = "Packing Label\n- ID - | Qty | Price | --- Product Name ---\n";
+        string data = "\nPacking Label\n- ID - | Qty | Price | --- Product Name ---\n";
         foreach (Product p in _products)
         {
             data = data + $"{p.GetProductID()}     {p.GetQty()}      {p.GetPrice()}      {p.GetName()}\n";
