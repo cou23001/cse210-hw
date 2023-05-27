@@ -48,7 +48,7 @@ public class CheckListGoal: Goal
             
         return GetGoalPoints() + bonus;
     }
-     public override int RecordEvent()
+    public override int RecordEvent()
     {
         AddEvent();
         AddTimesCompleted();
