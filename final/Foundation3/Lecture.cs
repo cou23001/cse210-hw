@@ -10,6 +10,6 @@ public class Lecture : Event
 
     public string GetFullDetails()
     {
-        return base.GetStandardDetails() + ($"\nSpeaker: {_speaker}\nCapacity: {_capacity}");
+        return $"{base.GetStandardDetails()}\nType: {GetType()}\nSpeaker: {_speaker}\nCapacity: {_capacity}";
     }
 }

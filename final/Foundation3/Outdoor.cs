@@ -6,8 +6,12 @@ public class Outdoor : Event
         _weather = weather;
     }
 
-    public override string ToString()
+    public string GetWeather()
     {
-        return base.ToString() + ($"Weather: {_weather}");
+        return _weather;
+    }
+    public string GetFullDetails()
+    {
+        return $"{base.GetStandardDetails()}\nType: {GetType()}\nWeather: {GetWeather()}";
     }
 }

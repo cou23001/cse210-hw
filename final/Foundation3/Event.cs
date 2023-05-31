@@ -51,11 +51,11 @@ public class Event
 
     public string GetStandardDetails()
     {
-        return ($"Title: {GetTitle()}\nDescription: {GetDescription()}\nDate: {GetDate()}, {GetTime()} hrs.\nAddress:\n{GetAddress()}\n");
+        return ($"Title: {GetTitle()}\nDescription: {GetDescription()}\nDate: {GetDate()}, {GetTime()} hrs.\nAddress:\n{GetAddress()}");
     }
 
     public string GetShortDescription()
     {
-        return ($"Title: {GetTitle()}\nDate: {GetDate()}\nType: {GetType()}");
+        return ($"Type: {GetType()}\nTitle: {GetTitle()}\nDate: {GetDate()}\n");
     }
 }
