@@ -1,6 +1,7 @@
 public abstract class Activity
 {
     private string _date;
+
     private double _length;
 
     public Activity(string date, double length)
@@ -8,6 +9,7 @@ public abstract class Activity
         _date = date;
         _length = length;
     }
+    
     public string GetDate()
     {
         return _date;

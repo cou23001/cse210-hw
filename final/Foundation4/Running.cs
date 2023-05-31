@@ -6,6 +6,7 @@ public class Running: Activity
     {
         _distance = distance;
     }
+    
     public override double GetDistance()
     {
         return _distance;
@@ -15,11 +16,13 @@ public class Running: Activity
         double speed = GetDistance() / GetLength() * 60;
         return Math.Round(speed, 1);
     }
+
     public override double GetPace()
     {
         double pace = GetLength() / GetDistance();
         return Math.Round(pace, 1);
     }
+
     public override string GetSummary()
     {
         return ($"{GetDate()} {GetType()} ({GetLength()} min)- Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace:{GetPace()} min per mile");
