@@ -9,7 +9,7 @@ public abstract class Activity
         _date = date;
         _length = length;
     }
-    
+
     public string GetDate()
     {
         return _date;
@@ -19,6 +19,7 @@ public abstract class Activity
     {
         return _length;
     }
+    
     public abstract string GetSummary();
     public abstract double GetDistance();
     public abstract double GetSpeed();
