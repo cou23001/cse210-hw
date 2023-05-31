@@ -40,14 +40,17 @@ public class Video
     {
         _length = length;
     }
+
     public void AddComment(Comment comment)
     {
         _comments.Add(comment);
     }
+    
     public int CommentsCount()
     {
         return _comments.Count;
     }
+
     public override string ToString()
     {
         string output = "";

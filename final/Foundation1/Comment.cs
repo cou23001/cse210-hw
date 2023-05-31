@@ -8,22 +8,27 @@ public class Comment
         _name = name;
         _text = text;
     }
+
     public string GetName() 
     {
         return _name;
     }
+
     public string GetText()
     {
         return _text;
     }
+
     public void SetName(string name)
     {
         _name = name;
     }
+
     public void SetText(string text)
     {
         _text = text;
     }
+    
     public override string ToString()
     {
         return ($"{GetName()} => {GetText()}");
