@@ -44,11 +44,6 @@ public class Event
         return _address.ToString();
     }
 
-    public override string ToString()
-    {
-        return ($"Title: {GetTitle()}\n{GetDescription()}\n{GetDate()}, {GetTime()} hrs.\n{GetAddress()}\n");
-    }
-
     public string GetStandardDetails()
     {
         return ($"Title: {GetTitle()}\nDescription: {GetDescription()}\nDate: {GetDate()}, {GetTime()} hrs.\nAddress:\n{GetAddress()}");
