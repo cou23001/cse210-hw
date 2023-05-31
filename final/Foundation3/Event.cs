@@ -34,6 +34,7 @@ public class Event
     {
         return _time;
     }
+    
     public string GetDateTime()
     {
         return ($"{_date} {_time}");

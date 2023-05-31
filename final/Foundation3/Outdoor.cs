@@ -10,6 +10,7 @@ public class Outdoor : Event
     {
         return _weather;
     }
+    
     public string GetFullDetails()
     {
         return $"{base.GetStandardDetails()}\nType: {GetType()}\nWeather: {GetWeather()}";
