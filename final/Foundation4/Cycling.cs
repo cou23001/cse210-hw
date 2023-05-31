@@ -1,19 +1,20 @@
-public class Running: Activity
+public class Cycling: Activity
 {
-    private double _distance;
+    private double _speed;
 
-    public Running(string date, double length, double distance): base(date,length)
+    public Cycling(string date, double length, double speed): base(date,length)
     {
-        _distance = distance;
+        _speed = speed;
     }
+
     public override double GetDistance()
     {
-        return _distance;
+        double distance = GetSpeed() * GetLength() / 60;
+        return Math.Round(distance,1);
     }
     public override double GetSpeed()
     {
-        double speed = GetDistance() / GetLength() * 60;
-        return Math.Round(speed, 1);
+        return _speed;
     }
     public override double GetPace()
     {
@@ -24,4 +25,5 @@ public class Running: Activity
     {
         return ($"{GetDate()} {GetType()} ({GetLength()} min)- Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace:{GetPace()} min per mile");
     }
+
 }

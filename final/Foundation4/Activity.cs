@@ -1,24 +1,24 @@
 public abstract class Activity
 {
     private string _date;
-    private int _lengthActivity;
+    private double _length;
 
-    public Activity(string date, int length)
+    public Activity(string date, double length)
     {
         _date = date;
-        _lengthActivity = length;
+        _length = length;
     }
     public string GetDate()
     {
         return _date;
     }
 
-    public int GetLengthActivity()
+    public double GetLength()
     {
-        return _lengthActivity;
+        return _length;
     }
     public abstract string GetSummary();
-    public abstract int GetDistance();
+    public abstract double GetDistance();
     public abstract double GetSpeed();
     public abstract double GetPace();
 }

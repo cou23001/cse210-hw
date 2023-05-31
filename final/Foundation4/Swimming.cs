@@ -1,14 +1,18 @@
-public class Running: Activity
+public class Swimming: Activity
 {
-    private double _distance;
-
-    public Running(string date, double length, double distance): base(date,length)
+    private int _swimmingLaps;
+    public Swimming(string date, double length, int number): base(date,length)
     {
-        _distance = distance;
+        _swimmingLaps = number;
+    }
+    public int GetSwimmingLaps()
+    {
+        return _swimmingLaps;
     }
     public override double GetDistance()
     {
-        return _distance;
+        double distance = (double) GetSwimmingLaps() * 50 / 1000;
+        return Math.Round(distance,1);
     }
     public override double GetSpeed()
     {
